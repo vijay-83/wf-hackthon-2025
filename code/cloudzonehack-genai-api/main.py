@@ -36,7 +36,7 @@ async def get_recommendation(request: Request):
 
         return {"recommendation": completion["choices"][0]["text"].strip()}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generating recommendation: {e}"
+        raise HTTPException(status_code=500, detail=f"Error generating recommendation: {e}")
                             
 
 
@@ -48,8 +48,9 @@ async def recommendation(request: Request):
         incident_details = data.get("incidentDetails", "No details provided.")
 
         # Query OpenAI GPT model
-        response = openai.Completion.create(
-            model="text-davinci-003",
+        openai = OpenAI(api_key=OPENAI_API_KEY)
+        response = openai.completions.create(
+            model="gpt-3.5-turbo",
             prompt=f"Provide a contextual recommendation for the following incident: {incident_details}",
             max_tokens=200,
         )
@@ -68,8 +69,9 @@ async def resolution(request: Request):
         incident_details = data.get("incidentDetails", "No details provided.")
 
         # Query OpenAI GPT model
-        response = openai.Completion.create(
-            model="text-davinci-003",
+        openai = OpenAI(api_key=OPENAI_API_KEY)
+        response = openai.completions.create(
+            model="gpt-3.5-turbo",
             prompt=f"Provide a step-by-step resolution plan for the following incident: {incident_details}",
             max_tokens=300,
         )
@@ -85,7 +87,7 @@ async def resolution(request: Request):
 async def telemetry():
     try:
         # Fetch data from Hugging Face dataset
-        response = requests.get(HUGGING_FACE_DATASET_URL)
+        response = requests.get(DATASET_ENDPOINT)
         response.raise_for_status()
         return response.json()
     except Exception as e:
