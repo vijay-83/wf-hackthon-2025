@@ -14,8 +14,7 @@ app.add_middleware(
 )
 
 # OpenAI API Key
-OPENAI_API_KEY = ""  # Replace with your OpenAI key
-
+OPENAI_API_KEY = ""
 # Hugging Face Dataset Endpoint
 DATASET_ENDPOINT = "https://datasets-server.huggingface.co/rows?dataset=arsen-r-a%2Fincident-management-generative-test1&config=default&split=train&offset=0&length=100"  # Replace with actual Hugging Face endpoint
 

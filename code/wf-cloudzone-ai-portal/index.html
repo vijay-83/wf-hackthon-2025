@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudZone:Hackthon2025 Gen AI For Platform Support - Integrated Platform Environment </title>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .dashboard-container {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+            .filter-section select {
+                padding: 5px;
+                margin-left: 10px;
+            }
+
+        .incident-summary {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .incident-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .incident-list table, .incident-list th, .incident-list td {
+            border: 1px solid #ddd;
+        }
+
+        .incident-list th, .incident-list td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .incident-list th {
+            background-color: #f4f4f4;
+        }
+
+        .incident-list tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            margin-top: 20px;
+        }
+
+        .chatbox {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+
+        .chat-message {
+            margin: 5px 0;
+        }
+
+        .user-message {
+            text-align: right;
+            color: blue;
+        }
+
+        .bot-message {
+            text-align: left;
+            color: green;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <div class="footer">
+        <p>&copy; Hackthon 2025 Wells Fargo.</p>
+    </div>
+</body>
+</html>
+
+
+

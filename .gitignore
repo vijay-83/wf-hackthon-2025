@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/code/wf-cloudzone-ai-portal/.vs
+/code/wf-cloudzone-ai-portal/obj/Debug
