@@ -1,0 +1,87 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+*/
+
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+    .filter-section select {
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+.incident-summary {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.incident-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.incident-list table, .incident-list th, .incident-list td {
+    border: 1px solid #ddd;
+}
+
+.incident-list th, .incident-list td {
+    padding: 10px;
+    text-align: left;
+}
+
+.incident-list th {
+    background-color: #f4f4f4;
+}
+
+.incident-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
