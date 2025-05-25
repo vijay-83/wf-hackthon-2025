@@ -1,30 +1,28 @@
 # wf-hackthon-2025
-wf hackthon 20225
-System Architecture
+
+## 🧩 System Architecture
 ![image](https://github.com/user-attachments/assets/2609ae67-0f4f-42d8-9aee-eac92fc59914)
 
+## 🧩Vector Database Inetfcae for RAG
+![api-interface](https://github.com/user-attachments/assets/0523a36d-6ed2-4525-99c8-8405697f0da5)
 
-Vector Database Inetfcae for RAG
-![ChatGPT Image May 24, 2025, 08_54_18 AM](https://github.com/user-attachments/assets/1c6230cc-447d-4a98-b513-c18622fae748)
-
-Portal UI
-![image](https://github.com/user-attachments/assets/abf1e87d-d442-4e19-97d2-a9aa96e8e507)
-![image](https://github.com/user-attachments/assets/3bc4d2fa-afe7-43b9-9b55-cb04a3e4a0bc)
-
-## 🧩 System Architecture (with Bug Fix Agent)
+## 🧩 System Architecture (Full Interaction Flow with Vector Sync)
 
 ```mermaid
 flowchart LR
+  %% FRONTEND
   subgraph Frontend
     A[Vite React Chatbot]
   end
 
+  %% API
   subgraph API
     B[.NET Core Web API]
     B1[IncidentController]
     B2[AgentController]
   end
 
+  %% SERVICES
   subgraph Services
     C[Mock ServiceNow Client]
     D[Qdrant Vector Store]
@@ -32,34 +30,54 @@ flowchart LR
     E2[LangChain Suggestion Agent]
     E3[LangChain Bug Fix Agent]
     F[JIRA Service]
-    G[Auth Service]
+    G[Auth Service ]
   end
 
-  A -- "Get Incidents" --> B1
-  A -- "Summarize Incident" --> B2
-  A -- "Suggest Fixes" --> B2
-  A -- "Generate Bug Fix" --> B2
+  %% FRONTEND → API
+  A -- "🔴 Incident Query" --> B1
+  A -- "🟠 Summarize" --> B2
+  A -- "🟡 Suggest Fixes" --> B2
+  A -- "🟢 Bug Fix Agent" --> B2
 
-  B1 -- GetIncidentsAsync --> C
-  C -- JSON Incidents --> B1
-  B1 -- IndexIncidents --> D
-  D -- Vectors --> Qdrant[(Qdrant DB)]
+  %% INCIDENT FLOW
+  B1 -- "🔴 GetIncidentsAsync" --> C
+  C -- "🟣 JSON Incidents" --> B1
+  B1 -- "🟡 IndexIncidents" --> D
+  D -- "🟣 Vectors" --> Qdrant[(Qdrant DB)]
 
-  B2 -- POST summary --> E1
-  B2 -- POST suggest --> E2
-  B2 -- POST bugfix --> E3
+  %% AGENT REQUESTS
+  B2 -- "🟠 summary req" --> E1
+  B2 -- "🟡 suggest req" --> E2
+  B2 -- "🟢 bugfix req" --> E3
 
-  E1 -- Summary Text --> B2
-  E2 -- Suggestions --> B2
-  E3 -- Code Fix / Plan --> B2
+  %% AGENT RESPONSES
+  E1 -- "🟠 summary" --> B2
+  E2 -- "🟡 suggestions" --> B2
+  E3 -- "🟢 fix/code" --> B2
 
-  B2 -- (future) create Jira ticket --> F
-  B -- (future) token auth --> G
+  %% RE-INDEXING VECTOR STORE
+  E2 -- "🔁 reindex suggestions" --> D
+  E3 -- "🔁 reindex fixes" --> D
 
+  %% API → CHATBOT RESPONSES
+  B1 -- "📤 Incidents Response" --> A
+  B2 -- "📤 Summary/Assist/Fix" --> A
+
+  %% FUTURE
+  B2 -- "🔵 create JIRA ticket" --> F
+  B -- "🔒 auth token" --> G
+
+  %% STYLES
   style Qdrant fill:#f9f,stroke:#333,stroke-width:2px
   style F fill:#9cf,stroke:#333,stroke-width:2px
   style E3 fill:#cfc,stroke:#333,stroke-width:2px
+```
+
+## 🧩 Portal UI Development 
+**🟢Demo Work Completion** : 50%  **🟡Actual Integration Pending** : 30%   **🟠Business Logic and Bug Fix** : 20%  
+![image](https://github.com/user-attachments/assets/abf1e87d-d442-4e19-97d2-a9aa96e8e507)
+![image](https://github.com/user-attachments/assets/3bc4d2fa-afe7-43b9-9b55-cb04a3e4a0bc)
 
 
-
-
+## 🧩 API Inetrface Development
+**🟢Demo Work Completion** : 20%  **🔵Demo Work Inprogres** : 30%  **🟡Actual Integration Pending** : 30%   **🟠Business Logic and Bug Fix** : 20% 
