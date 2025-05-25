@@ -1,4 +1,4 @@
-
+﻿
 .chat-input-container {
 display: flex;
 padding: 12px;
@@ -23,12 +23,22 @@ border-radius: 8px;
 cursor: pointer;
 }
 
-.chat-window {
+/*.chat-window {
 flex: 1;
 overflow-y: auto;
 padding: 16px;
 display: flex;
-flex-direction: column-reverse; /* KEY: reverse message flow */
+flex-direction: column-reverse;*/ /* KEY: reverse message flow */
+/*}*/
+
+
+.chat-window {
+    display: flex;
+    flex-direction: column-reverse; /* This makes new messages appear at the bottom */
+    overflow-y: auto;
+    height: 300px; /* or whatever height you want */
+    padding: 1rem;
+    gap: 0.5rem;
 }
 
 .chat-messages {
@@ -167,3 +177,37 @@ color: white;
 margin-left: 8px;
 cursor: pointer;
 }
+
+.agent-selector {
+padding: 20px;
+text-align: center;
+}
+
+.agent-selector button {
+    margin: 8px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.agent-selector h3 {
+    margin-bottom: 16px;
+}
+
+.end-chat-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .end-chat-button:hover {
+        background-color: #e03a3d;
+    }

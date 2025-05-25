@@ -1,0 +1,902 @@
+[
+  {
+    "id": "AKS-1001",
+    "summary": "Investigate High CPU Utilization on AKS System Node Pool",
+    "description": "The system node pool in AKS cluster 'aks-prod-01' is consistently reporting high CPU utilization (over 90%) during peak hours. This is impacting the stability of critical system add-ons. Need to identify the root cause and implement a fix.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "NodePool",
+      "Performance"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "High CPU on AKS system node pool in aks-prod-01",
+      "issue_id": "AKS-1001",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1002",
+    "summary": "Upgrade AKS Cluster 'aks-dev-02' to Kubernetes 1.29.x",
+    "description": "Plan and execute the upgrade of AKS cluster 'aks-dev-02' from Kubernetes version 1.28.5 to 1.29.x. Ensure compatibility with deployed applications and minimal downtime.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "Upgrade",
+      "Kubernetes"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Upgrade aks-dev-02 to Kubernetes 1.29.x",
+      "issue_id": "AKS-1002",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1003",
+    "summary": "Implement Azure Policy for AKS Network Security Groups",
+    "description": "Develop and apply Azure Policy to enforce best practices for Network Security Groups (NSGs) associated with AKS virtual networks. This includes restricting SSH access and enabling essential ports only.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "AzurePolicy"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Enforce NSG best practices via Azure Policy for AKS",
+      "issue_id": "AKS-1003",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1004",
+    "summary": "Troubleshoot Intermittent Pod Evictions in 'data-processing' Namespace",
+    "description": "Pods in the 'data-processing' namespace on 'aks-uat-01' are experiencing intermittent evictions. Investigate node resource pressure, taints/tolerations, and pod disruption budgets.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Troubleshooting",
+      "PodEviction"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Intermittent pod evictions in data-processing namespace",
+      "issue_id": "AKS-1004",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1005",
+    "summary": "Configure AKS Diagnostic Settings for Azure Monitor",
+    "description": "Ensure comprehensive diagnostic settings are enabled for all AKS clusters to stream logs and metrics to Azure Monitor Log Analytics workspace. This will improve observability.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Monitoring",
+      "AzureMonitor"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Enable AKS diagnostic settings for Azure Monitor",
+      "issue_id": "AKS-1005",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1006",
+    "summary": "Evaluate Azure CNI Overlay for IP Address Scalability",
+    "description": "Research and evaluate the feasibility of migrating existing AKS clusters to Azure CNI Overlay to address IP address exhaustion and improve network scalability.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "CNI"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Evaluate Azure CNI Overlay for IP scalability",
+      "issue_id": "AKS-1006",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1007",
+    "summary": "Automate AKS Cluster Provisioning with Terraform",
+    "description": "Develop and test Terraform modules for automated provisioning of new AKS clusters, including VNet, Subnets, and associated resources.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "Automation",
+      "Terraform"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Automate AKS cluster provisioning with Terraform",
+      "issue_id": "AKS-1007",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1008",
+    "summary": "Review and Optimize AKS Ingress Controller Configuration",
+    "description": "Review the current NGINX Ingress Controller configuration for AKS 'aks-prod-01' and identify areas for optimization to improve latency and throughput.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "Ingress"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Optimize AKS Ingress Controller configuration",
+      "issue_id": "AKS-1008",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1009",
+    "summary": "Investigate Failed AKS Node Pool Scale Out",
+    "description": "Node pool 'app-pool' in 'aks-prod-01' is failing to scale out when demand increases. Examine Azure subscription limits, resource group quotas, and AKS service principal permissions.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "NodePool",
+      "Scaling"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "AKS node pool scale out failing in aks-prod-01",
+      "issue_id": "AKS-1009",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1010",
+    "summary": "Implement Azure Container Registry (ACR) Geo-Replication",
+    "description": "Configure geo-replication for the primary Azure Container Registry to improve image pull performance for AKS clusters in different regions.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "ACR",
+      "Replication"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Implement ACR geo-replication for AKS",
+      "issue_id": "AKS-1010",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1011",
+    "summary": "Review AKS Cluster Role-Based Access Control (RBAC)",
+    "description": "Conduct a comprehensive audit of RBAC roles and bindings within AKS cluster 'aks-prod-01' to ensure least privilege access and compliance.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "RBAC"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Audit AKS cluster RBAC for least privilege",
+      "issue_id": "AKS-1011",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1012",
+    "summary": "Integrate Azure Key Vault with AKS for Secret Management",
+    "description": "Configure Azure Key Vault integration with AKS using the Azure Key Vault Provider for Secret Store CSI Driver to securely manage application secrets.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "Security",
+      "KeyVault"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Integrate Azure Key Vault with AKS for secrets",
+      "issue_id": "AKS-1012",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1013",
+    "summary": "Optimize AKS Control Plane Performance",
+    "description": "Analyze metrics related to AKS control plane (API server, etcd) and identify bottlenecks. Implement configurations to improve response times and stability.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Performance",
+      "ControlPlane"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Optimize AKS control plane performance",
+      "issue_id": "AKS-1013",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1014",
+    "summary": "Implement Azure Active Directory Pod Identity for AKS",
+    "description": "Configure Azure Active Directory Pod Identity for applications running on AKS to securely access Azure resources without managing credentials.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "AADPodIdentity"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Implement AAD Pod Identity for AKS apps",
+      "issue_id": "AKS-1014",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1015",
+    "summary": "Troubleshoot High Network Latency in AKS Pods",
+    "description": "Investigate reported high network latency between pods within the same AKS cluster 'aks-prod-02'. Check CNI, network policies, and underlying Azure networking.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "Troubleshooting"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "High network latency in AKS pods",
+      "issue_id": "AKS-1015",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1016",
+    "summary": "Develop Disaster Recovery Plan for AKS 'aks-prod-01'",
+    "description": "Define and document a comprehensive disaster recovery plan for AKS production cluster 'aks-prod-01', including backup, restore, and failover procedures.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "DR",
+      "Operations"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Develop DR plan for AKS aks-prod-01",
+      "issue_id": "AKS-1016",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1017",
+    "summary": "Automate AKS Node Image Updates",
+    "description": "Implement a strategy to automate and schedule AKS node image updates to ensure nodes are running the latest security patches and bug fixes.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Automation",
+      "Security"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Automate AKS node image updates",
+      "issue_id": "AKS-1017",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1018",
+    "summary": "Implement Azure Firewall for Egress Traffic from AKS",
+    "description": "Configure Azure Firewall to control and filter all egress traffic originating from AKS cluster 'aks-prod-01' to external services.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "Networking"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Implement Azure Firewall for AKS egress",
+      "issue_id": "AKS-1018",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1019",
+    "summary": "Investigate AKS Load Balancer Health Probe Failures",
+    "description": "Load balancer health probes for certain services in 'aks-uat-01' are intermittently failing, causing traffic blackholes. Examine service readiness probes and load balancer configuration.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "Troubleshooting"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "AKS Load Balancer health probe failures",
+      "issue_id": "AKS-1019",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1020",
+    "summary": "Migrate Helm Charts to OCI Registry in ACR",
+    "description": "Transition existing Helm charts from a chart repository to be stored as OCI artifacts within Azure Container Registry to streamline deployment workflows.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "ACR",
+      "Helm"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Migrate Helm charts to OCI registry in ACR",
+      "issue_id": "AKS-1020",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1021",
+    "summary": "Evaluate AKS cost optimization strategies",
+    "description": "Research and propose cost optimization strategies for AKS clusters, including rightsizing node pools, using spot instances, and analyzing resource utilization.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "CostOptimization",
+      "FinOps"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Evaluate AKS cost optimization strategies",
+      "issue_id": "AKS-1021",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1022",
+    "summary": "Implement Pod Security Standards for AKS",
+    "description": "Configure and enforce Pod Security Standards (PSS) for all namespaces in AKS cluster 'aks-prod-01' to enhance container runtime security.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "PSS"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Implement Pod Security Standards for AKS",
+      "issue_id": "AKS-1022",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1023",
+    "summary": "Troubleshoot AKS Cluster Authentication Issues",
+    "description": "Users are reporting intermittent failures when authenticating to AKS cluster 'aks-dev-01' using Azure AD. Investigate AAD integration and RBAC configuration.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Authentication",
+      "Troubleshooting"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Troubleshoot AKS cluster authentication issues",
+      "issue_id": "AKS-1023",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1024",
+    "summary": "Integrate AKS with Azure Defender for Cloud",
+    "description": "Enable and configure Azure Defender for Cloud (formerly Azure Security Center) integration with AKS clusters to receive security recommendations and alerts.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "AzureDefender"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Integrate AKS with Azure Defender for Cloud",
+      "issue_id": "AKS-1024",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1025",
+    "summary": "Review AKS Network Plugin Options (Kubenet vs. Azure CNI)",
+    "description": "Re-evaluate the existing network plugin choice for AKS clusters and consider migration options to Azure CNI for better integration and advanced features.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "CNI"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Review AKS network plugin options",
+      "issue_id": "AKS-1025",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1026",
+    "summary": "Document AKS Cluster Hardening Best Practices",
+    "description": "Create comprehensive documentation outlining best practices for hardening AKS clusters, covering security, networking, and operational aspects.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Documentation",
+      "Security"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Document AKS cluster hardening best practices",
+      "issue_id": "AKS-1026",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1027",
+    "summary": "Investigate Data Disk Performance Issues on AKS Nodes",
+    "description": "Applications relying on persistent volumes are experiencing slow I/O operations on AKS cluster 'aks-prod-02'. Investigate underlying Azure disk performance and storage classes.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Storage",
+      "Performance"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Data disk performance issues on AKS nodes",
+      "issue_id": "AKS-1027",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1028",
+    "summary": "Upgrade AKS Cluster 'aks-uat-01' Kubernetes version to 1.30.x",
+    "description": "Plan and execute the upgrade of AKS cluster 'aks-uat-01' from Kubernetes version 1.29.x to 1.30.x. Coordinate with application teams for testing.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "Upgrade",
+      "Kubernetes"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Upgrade aks-uat-01 to Kubernetes 1.30.x",
+      "issue_id": "AKS-1028",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1029",
+    "summary": "Implement Centralized Log Aggregation for AKS",
+    "description": "Configure all AKS clusters to send logs to a centralized Azure Log Analytics workspace for efficient querying and analysis.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Monitoring",
+      "Logging"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Centralized log aggregation for AKS",
+      "issue_id": "AKS-1029",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1030",
+    "summary": "Automate AKS Cost Reporting and Alerting",
+    "description": "Develop scripts or leverage Azure Cost Management features to generate automated reports and alerts for AKS resource consumption and costs.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "CostOptimization",
+      "Automation"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Automate AKS cost reporting and alerting",
+      "issue_id": "AKS-1030",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1031",
+    "summary": "Review and Optimize AKS Network Policies",
+    "description": "Review existing Kubernetes Network Policies in AKS cluster 'aks-prod-01' and optimize them for clarity, efficiency, and security.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Networking",
+      "Security"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Optimize AKS network policies",
+      "issue_id": "AKS-1031",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1032",
+    "summary": "Troubleshoot AKS Cluster API Server Unresponsiveness",
+    "description": "The AKS API server for 'aks-dev-02' is intermittently unresponsive. Investigate control plane logs, network connectivity, and resource limits.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "ControlPlane",
+      "Troubleshooting"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "AKS API server unresponsive",
+      "issue_id": "AKS-1032",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1033",
+    "summary": "Implement Managed Identity for AKS Cluster",
+    "description": "Transition AKS cluster 'aks-prod-01' to use Managed Identity instead of a Service Principal for increased security and simplified credential management.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "ManagedIdentity"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Implement Managed Identity for AKS cluster",
+      "issue_id": "AKS-1033",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1034",
+    "summary": "Investigate High Memory Utilization on AKS Data Node Pool",
+    "description": "The data node pool in AKS cluster 'aks-prod-02' is showing high memory usage, leading to OOMKills for certain applications. Identify memory hogs and optimize resource requests/limits.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "NodePool",
+      "Performance"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "High memory utilization on AKS data node pool",
+      "issue_id": "AKS-1034",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1035",
+    "summary": "Configure Prometheus and Grafana for AKS Monitoring",
+    "description": "Set up Prometheus and Grafana within AKS 'aks-dev-01' for advanced monitoring and visualization of cluster and application metrics.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Monitoring",
+      "Grafana"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Configure Prometheus and Grafana for AKS",
+      "issue_id": "AKS-1035",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1036",
+    "summary": "Implement GitOps with Flux CD for AKS Deployments",
+    "description": "Establish a GitOps workflow using Flux CD for continuous delivery of applications and configurations to AKS clusters.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "GitOps",
+      "Automation"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Implement GitOps with Flux CD for AKS",
+      "issue_id": "AKS-1036",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1037",
+    "summary": "Automate AKS Cluster Backup and Restore",
+    "description": "Explore and implement an automated solution for backing up AKS cluster configurations and persistent volumes, with a defined restore process.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Backup",
+      "Automation"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Automate AKS cluster backup and restore",
+      "issue_id": "AKS-1037",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1038",
+    "summary": "Review and Update AKS Container Image Scanning Policy",
+    "description": "Review the current container image scanning policy within Azure Container Registry and integrate with CI/CD pipelines for automated vulnerability checks.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "ACR"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Update AKS container image scanning policy",
+      "issue_id": "AKS-1038",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1039",
+    "summary": "Troubleshoot Persistent Volume Claim (PVC) Binding Issues",
+    "description": "Applications in 'aks-prod-01' are failing to bind Persistent Volume Claims. Investigate storage class definitions, Azure disk availability, and CSI driver logs.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Storage",
+      "Troubleshooting"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "PVC binding issues in AKS",
+      "issue_id": "AKS-1039",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1040",
+    "summary": "Evaluate Azure Service Mesh Add-on for AKS",
+    "description": "Research and evaluate the new Azure Service Mesh add-on for AKS (based on Istio) to determine its suitability for current and future application requirements.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "ServiceMesh",
+      "Networking"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Evaluate Azure Service Mesh add-on for AKS",
+      "issue_id": "AKS-1040",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1041",
+    "summary": "Configure AKS Auto-scaling for Horizontal Pod Autoscaler",
+    "description": "Implement and fine-tune Horizontal Pod Autoscaler (HPA) for critical applications in AKS 'aks-prod-01' to ensure optimal resource utilization and responsiveness.",
+    "priority": "Medium",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "Scaling",
+      "Performance"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Configure AKS auto-scaling for HPA",
+      "issue_id": "AKS-1041",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1042",
+    "summary": "Implement Azure Firewall for AKS Cluster Ingress Traffic",
+    "description": "Configure Azure Firewall to filter and protect ingress traffic to AKS applications, complementing or replacing existing ingress controllers.",
+    "priority": "High",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "Networking"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Implement Azure Firewall for AKS ingress",
+      "issue_id": "AKS-1042",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1043",
+    "summary": "Investigate AKS Cluster Upgrade Failures",
+    "description": "Failed upgrade attempts for AKS cluster 'aks-dev-02' from 1.28.x to 1.29.x. Analyze pre-flight checks, upgrade logs, and resource health.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Upgrade",
+      "Troubleshooting"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "AKS cluster upgrade failures",
+      "issue_id": "AKS-1043",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1044",
+    "summary": "Review and Optimize AKS Node Pool Configuration",
+    "description": "Evaluate the size, SKU, and scaling parameters of existing AKS node pools for optimal performance and cost efficiency.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "NodePool",
+      "Optimization"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Optimize AKS node pool configuration",
+      "issue_id": "AKS-1044",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1045",
+    "summary": "Integrate AKS with Azure DevOps for CI/CD",
+    "description": "Set up and configure Azure DevOps pipelines to automate the build, test, and deployment of applications to AKS clusters.",
+    "priority": "High",
+    "status": "In Progress",
+    "labels": [
+      "AKS",
+      "CI/CD",
+      "AzureDevOps"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Integrate AKS with Azure DevOps for CI/CD",
+      "issue_id": "AKS-1045",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": "AKS-1046",
+    "summary": "Implement Azure Active Directory Integration for Kubernetes Dashboard",
+    "description": "Secure the Kubernetes Dashboard access for AKS cluster 'aks-dev-01' by integrating it with Azure Active Directory authentication.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "Authentication"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Integrate AAD for Kubernetes Dashboard",
+      "issue_id": "AKS-1046",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1047",
+    "summary": "Troubleshoot Service Mesh Traffic Routing Issues",
+    "description": "Applications within the service mesh (e.g., Istio) in AKS 'aks-prod-01' are experiencing incorrect traffic routing. Investigate VirtualService and Gateway configurations.",
+    "priority": "Highest",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "ServiceMesh",
+      "Troubleshooting"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Service mesh traffic routing issues",
+      "issue_id": "AKS-1047",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1048",
+    "summary": "Evaluate AKS Workload Identity for Enhanced Security",
+    "description": "Research and plan the migration of existing AKS applications from AAD Pod Identity to Workload Identity for improved security and simplified management.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Security",
+      "WorkloadIdentity"
+    ],
+    "assignee": "david.lee",
+    "payload": {
+      "text": "Evaluate AKS Workload Identity",
+      "issue_id": "AKS-1048",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1049",
+    "summary": "Implement Azure Monitor Action Groups for AKS Alerts",
+    "description": "Configure Azure Monitor Action Groups to send notifications (email, SMS, webhook) for critical AKS-related alerts and incidents.",
+    "priority": "Medium",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Monitoring",
+      "Alerting"
+    ],
+    "assignee": "john.doe",
+    "payload": {
+      "text": "Implement Azure Monitor Action Groups for AKS alerts",
+      "issue_id": "AKS-1049",
+      "status": "Open"
+    }
+  },
+  {
+    "id": "AKS-1050",
+    "summary": "Automate Deletion of Stale AKS Resources",
+    "description": "Develop and implement a process or script to identify and automatically delete stale or unused resources associated with AKS clusters (e.g., old load balancers, public IPs).",
+    "priority": "Low",
+    "status": "Open",
+    "labels": [
+      "AKS",
+      "Automation",
+      "CostOptimization"
+    ],
+    "assignee": "jane.smith",
+    "payload": {
+      "text": "Automate deletion of stale AKS resources",
+      "issue_id": "AKS-1050",
+      "status": "Open"
+    }
+  }
+]

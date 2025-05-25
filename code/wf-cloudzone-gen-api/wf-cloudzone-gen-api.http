@@ -1,0 +1,6 @@
+@wf_cloudzone_gen_api_HostAddress = http://localhost:5005
+
+GET {{wf_cloudzone_gen_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
