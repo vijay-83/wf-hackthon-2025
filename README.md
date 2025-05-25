@@ -81,3 +81,5 @@ flowchart LR
 
 ## 🧩 API Inetrface Development
 **🟢Demo Work Completion** : 20%  **🔵Demo Work Inprogres** : 30%  **🟡Actual Integration Pending** : 30%   **🟠Business Logic and Bug Fix** : 20% 
+![image](https://github.com/user-attachments/assets/9524f2de-cb1d-41a1-b5b7-0a8a04bfaa6c)
+
