@@ -11,7 +11,7 @@ Portal UI
 ![image](https://github.com/user-attachments/assets/abf1e87d-d442-4e19-97d2-a9aa96e8e507)
 ![image](https://github.com/user-attachments/assets/3bc4d2fa-afe7-43b9-9b55-cb04a3e4a0bc)
 
-## 🧩 GEN AI API Flow
+## 🧩 System Architecture (with Bug Fix Agent)
 
 ```mermaid
 flowchart LR
@@ -28,24 +28,38 @@ flowchart LR
   subgraph Services
     C[Mock ServiceNow Client]
     D[Qdrant Vector Store]
-    E[LangChain Agent]
-    F[JIRA Service]
-    G[Auth Service]
+    E1[LangChain Summary Agent]
+    E2[LangChain Suggestion Agent]
+    E3[LangChain Bug Fix Agent]
+    F[JIRA Service (future)]
+    G[Auth Service (future)]
   end
 
-  A -- HTTPS JSON --> B
+  A -- "Get Incidents" --> B1
+  A -- "Summarize Incident" --> B2
+  A -- "Suggest Fixes" --> B2
+  A -- "Generate Bug Fix" --> B2
+
   B1 -- GetIncidentsAsync --> C
-  C -- JSON List<IncidentDto> --> B1
-  B1 -- IndexIncidentAsync --> D
-  D -- upsert vectors --> Qdrant[(Qdrant DB)]
-  A -- “summarize” / “suggest” --> B2
-  B2 -- POST summary/request --> E
-  E -- suggestion/summary --> B2
+  C -- JSON Incidents --> B1
+  B1 -- IndexIncidents --> D
+  D -- Vectors --> Qdrant[(Qdrant DB)]
+
+  B2 -- POST summary --> E1
+  B2 -- POST suggest --> E2
+  B2 -- POST bugfix --> E3
+
+  E1 -- Summary Text --> B2
+  E2 -- Suggestions --> B2
+  E3 -- Code Fix / Plan --> B2
+
   B2 -- (future) create Jira ticket --> F
-  B -- (future) token --> G
+  B -- (future) token auth --> G
 
   style Qdrant fill:#f9f,stroke:#333,stroke-width:2px
-  style JIRA Service fill:#9cf,stroke:#333,stroke-width:2px
+  style F fill:#9cf,stroke:#333,stroke-width:2px
+  style E3 fill:#cfc,stroke:#333,stroke-width:2px
+
 
 
 
