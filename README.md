@@ -7,5 +7,9 @@ Vector Database Inetfcae for RAG
 ![ChatGPT Image May 24, 2025, 08_54_18 AM](https://github.com/user-attachments/assets/1c6230cc-447d-4a98-b513-c18622fae748)
 
 Portal UI
-![image](https://github.com/user-attachments/assets/d77a291a-4732-4193-96e5-5676805c7f6c)
+![image](https://github.com/user-attachments/assets/abf1e87d-d442-4e19-97d2-a9aa96e8e507)
+![image](https://github.com/user-attachments/assets/3bc4d2fa-afe7-43b9-9b55-cb04a3e4a0bc)
+
+
+
 
