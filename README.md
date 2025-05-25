@@ -31,8 +31,8 @@ flowchart LR
     E1[LangChain Summary Agent]
     E2[LangChain Suggestion Agent]
     E3[LangChain Bug Fix Agent]
-    F[JIRA Service (future)]
-    G[Auth Service (future)]
+    F[JIRA Service]
+    G[Auth Service]
   end
 
   A -- "Get Incidents" --> B1
