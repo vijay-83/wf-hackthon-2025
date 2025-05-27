@@ -3,7 +3,7 @@
 ## 🧩 System Architecture
 ![image](https://github.com/user-attachments/assets/2609ae67-0f4f-42d8-9aee-eac92fc59914)
 
-## 🧩Vector Database Inetfcae for RAG
+## 🧩Vector Database Interface for RAG
 ![api-interface](https://github.com/user-attachments/assets/0523a36d-6ed2-4525-99c8-8405697f0da5)
 
 ## 🧩 System Architecture (Full Interaction Flow with Vector Sync)
