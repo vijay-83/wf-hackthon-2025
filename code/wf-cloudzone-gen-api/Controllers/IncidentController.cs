@@ -12,18 +12,11 @@ namespace wf_cloudzone_gen_api.Controllers
         {
             _incidentService = incidentService;
         }
-
-        [HttpGet("query")]
-        public async Task<IActionResult> GetIncidentsAsync([FromQuery] string searchTerm)
-        {
-            var incidents = await _incidentService.SearchIncidents(searchTerm);
-            return Ok(incidents);
-        }
-
+  
         [HttpGet("grid")]
-        public async Task<IActionResult> GetIncidentGrid([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetIncidentGrid([FromQuery] int itemCount =50)
         {
-            var incidents = await _incidentService.GetPaginatedIncidentsAsync(page, pageSize);
+            var incidents = await _incidentService.GetIncidentsByCountAsync(itemCount);
             return Ok(new { data = incidents, total = incidents.Count });
         }
 

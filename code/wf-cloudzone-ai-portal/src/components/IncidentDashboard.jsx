@@ -2,29 +2,23 @@
 import { DataGrid } from "@mui/x-data-grid";
 import "./IncidentDashboard.css";
 import ChatBot from '../components/GenAIChatBoat';
+import apiService from "../Service/ApiService";
+import Uploader from "../components/Uploader";
+
 function IncidentDashboard() {
 
-    const [issues, setIssues] = useState([]);
+    const [incidents, setIncidents] = useState([]);
     const [selectedStatus, setSelectedStatus] = useState("All");
 
     useEffect(() => {
-        fetch("/data.json")
-            .then(async (response) => {
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                const contentType = response.headers.get("content-type");
-                if (!contentType.includes("application/json")) {
-                    throw new Error(`Expected JSON, but got: ${contentType}`);
-                }
-                return response.json();
-            })
-            .then((data) => setIssues(data))
-            .catch((error) => console.error("Error fetching JSON:", error));
+        apiService.fetchIncidents(50)
+            .then((data) => setIncidents(data.data))
+            .catch((error) => console.error("Error fetching incidents:", error));
     }, []);
 
-    //// Filter incidents based on status
-    const filteredIssues = issues.filter((issue) =>
-        selectedStatus === "All" ? true : issue.status === selectedStatus
-    );
+
+    const filteredIncidents = selectedStatus === "All" ? (incidents || []) :
+        (incidents || []).filter((incident) => incident.status === selectedStatus);
 
     const columns = [
         { field: "id", headerName: "Issue ID", width: 100 },
@@ -34,10 +28,10 @@ function IncidentDashboard() {
         { field: "status", headerName: "Status", width: 120 },
     ];
     const [paginationModel, setPaginationModel] = useState({ page: 0, pageSize: 10 });
-    const total = issues.length;
-    const open = issues.filter((i) => i.status === "Open").length;
-    const resolved = issues.filter((i) => i.status === "Resolved").length;
-    const inProgress = issues.filter((i) => i.status === "In Progress").length;
+    const total = incidents.length;
+    const open = incidents.filter((i) => i.status === "Open").length;
+    const resolved = incidents.filter((i) => i.status === "Resolved").length;
+    const inProgress = incidents.filter((i) => i.status === "In Progress").length;
 
     return (
         <div className="dashboard-container">
@@ -49,7 +43,7 @@ function IncidentDashboard() {
                     <div className="incident-list">
                         <h2 className="section-title">📝 Incident List</h2>
                         <DataGrid
-                            rows={filteredIssues}
+                            rows={filteredIncidents}
                             columns={columns}
                             getRowId={(row) => row.id}
                             pagination
@@ -68,7 +62,7 @@ function IncidentDashboard() {
                             value={selectedStatus}
                             onChange={(e) => setSelectedStatus(e.target.value)}
                         >
-                            <option value="">All</option>
+                            <option value="All">All</option>
                             <option value="Open">Open</option>
                             <option value="In Progress">In Progress</option>
                             <option value="Resolved">Resolved</option>
@@ -99,6 +93,8 @@ function IncidentDashboard() {
                     <div className="chatbot-wrapper">
                         <h2 className="section-title">🤖 Platform Support Virtual Assistant</h2>
                         <ChatBot />
+                        <Uploader/>
+
                     </div>
                 </div>
             </div>

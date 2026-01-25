@@ -2,8 +2,8 @@
 {
     public interface ILangChainClient
     {
-        Task<string> GetSummary(string text);
-        Task<List<string>> GetSuggestions(string text);
-        Task<string> GetBugFix(string text);
+        Task<string> GetSummaryAsync(string prompt, List<string> context);
+        //Task<List<string>> GetSuggestions(string text);
+        //Task<string> GetBugFix(string text);
     }
 }

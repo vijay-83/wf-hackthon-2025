@@ -119,15 +119,15 @@ export default function ChatBot() {
                     <div className="chatbot-header">
                         <h3>🤖 {getAgentLabel(selectedAgent)}</h3>
                         <div className="chatbot-actions">
-                            <button onClick={handleClear} title="Clear Chat">🗑️</button>
-                            <button onClick={toggleFullscreen} title="Toggle Fullscreen">
+                                <button onClick={toggleFullscreen} title="Toggle Fullscreen" style={{fontSize:"25px"}}>
                                 {isFullscreen ? "🗗" : "🗖"}
                             </button>
-                            <button onClick={toggleMinimize} title="Minimize">
-                                {isMinimized ? "🔼" : "🔽"}
-                            </button>
+                            {/*<button onClick={toggleMinimize} title="Minimize">*/}
+                            {/*    {isMinimized ? "🔼" : "🔽"}*/}
+                                {/*</button>*/}
+                               < button onClick={handleClear} title="Clear Chat">🗑️</button>
                             <button className="end-chat-button" onClick={handleEndChat}>
-                                🔚 End Chat
+                               ❌
                             </button>
                         </div>
                     </div>

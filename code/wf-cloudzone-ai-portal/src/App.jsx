@@ -5,6 +5,7 @@ import { useState } from "react";
 import IncidentDashboard from "./components/IncidentDashboard";
 import backgroundImg from './assets/GenAIBackGround1.png';
 
+
 function App() {
 
     const apiEndpoint = "https://cloudzoneresumeapi.azurewebsites.net"

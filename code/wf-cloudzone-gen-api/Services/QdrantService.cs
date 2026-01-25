@@ -2,16 +2,17 @@
 using Qdrant.Client.Grpc;
 using QdrantRAGDemo.API.Controllers;
 using System.Text.RegularExpressions;
+using wf_cloudzone_gen_api.Interfaces;
 
 namespace wf_cloudzone_gen_api.Services;
 
 public class QdrantService
 {
     private readonly QdrantClient _client;
-    private readonly EmbeddingService _embeddingService;
+    private readonly IEmbeddingService _embeddingService;
     private readonly string _collection = "rag_collection";
 
-    public QdrantService(QdrantClient client, EmbeddingService embeddingService)
+    public QdrantService(QdrantClient client, IEmbeddingService embeddingService)
     {
         _client = client;
         _embeddingService = embeddingService;

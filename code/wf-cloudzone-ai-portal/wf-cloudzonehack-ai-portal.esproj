@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="deploy\" />
+    <Folder Include="src\Service\" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,22 @@
 using wf_cloudzone_gen_api.Interfaces;
 using wf_cloudzone_gen_api.LangChainIntegration;
+using wf_cloudzone_gen_api.LangChainIntegration.Summary;
 using wf_cloudzone_gen_api.Repositories;
 using wf_cloudzone_gen_api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontendDev", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 // Add services to the container.
 
@@ -25,19 +38,16 @@ catch (UriFormatException ex)
     Console.WriteLine($"Invalid URI: {ex.Message}");
 }
 
-builder.Services.AddSingleton<EmbeddingService>();
-builder.Services.AddSingleton<QdrantService>();
-// Inject custom services
-builder.Services.AddScoped<IIncidentService, IncidentService>();
-builder.Services.AddScoped<IAgentService, AgentService>();
-
 // Inject repositories (MockServiceNow & Qdrant)
+builder.Services.AddSingleton<QdrantService>();
 builder.Services.AddScoped<IMockServiceNowClient, MockServiceNowClient>();
-builder.Services.AddScoped<IQdrantRepository, QdrantRepository>();
+builder.Services.AddScoped<IIncidentService, IncidentService>();
+builder.Services.AddSingleton<IIncidentIndexerService, IncidentIndexerService>();
+builder.Services.AddSingleton<IEmbeddingService, EmbeddingService>();
 
 // Inject HttpClient for external API calls (LangChain, ServiceNow, Jira)
-builder.Services.AddHttpClient<ILangChainClient, LangChainClient>();
-
+builder.Services.AddHttpClient<LangChainClient>();
+builder.Services.AddScoped<ISummaryAgent, SummaryAgent>();
 
 var app = builder.Build();
 
@@ -49,6 +59,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowFrontendDev");
 
 app.UseAuthorization();
 
